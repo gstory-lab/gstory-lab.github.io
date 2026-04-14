@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Museum of G</title>
+    
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Noto+Sans+KR:wght@300;400&display=swap');
 
@@ -63,4 +66,92 @@
         .intro {
             text-align: center;
             padding-top: 250px;
-            min-height: 80
+            min-height: 80vh;
+        }
+
+        .intro h1 { 
+            font-size: 3.5rem; 
+            margin-bottom: 15px; 
+            font-weight: 600;
+            letter-spacing: -2px;
+        }
+
+        .thought-item {
+            margin-bottom: 60px;
+            text-align: left;
+        }
+
+        .date { 
+            font-size: 0.75rem; 
+            color: #ccc; 
+            display: block;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .content {
+            font-size: 1rem;
+            color: #444;
+            font-weight: 400;
+        }
+
+        .museum-box {
+            background: #fafafa;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ddd;
+            border: 1px solid #f0f0f0;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 600px) {
+            nav { gap: 20px; }
+            .intro h1 { font-size: 2.5rem; }
+            section { padding: 100px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#fragments">Fragments</a>
+        <a href="#stillness">Stillness</a>
+        <a href="#movement">Movement</a>
+    </nav>
+
+    <section id="home" class="intro">
+        <h1>I'm G.</h1>
+        <p style="color: #999; font-weight: 300; letter-spacing: 1px;">A Digital Museum of Moments and Thoughts</p>
+    </section>
+
+    <section id="fragments">
+        <h2>FRAGMENTS</h2>
+        <div class="thought-item">
+            <span class="date">APRIL 14, 2026</span>
+            <p class="content">생각은 종이에 붙잡아 두지 않으면 금세 달아난다.</p>
+        </div>
+        <div class="thought-item">
+            <span class="date">APRIL 10, 2026</span>
+            <p class="content">일기는 일기장에. 여기는 제 일기장입니다.</p>
+        </div>
+    </section>
+
+    <section id="stillness">
+        <h2>STILLNESS</h2>
+        <div class="museum-box">Reserved for a Captured Moment</div>
+    </section>
+
+    <section id="movement">
+        <h2>MOVEMENT</h2>
+        <div class="museum-box">Reserved for a Moving Sequence</div>
+    </section>
+
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+</body>
+</html>
