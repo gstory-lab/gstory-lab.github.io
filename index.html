@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Digital Museum of G</title>
     <style>
-        /* 깔끔하고 세련된 구글 폰트 적용 */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
         body {
@@ -14,56 +13,145 @@
             color: #1a1a1a;
             line-height: 1.8;
             margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            scroll-behavior: smooth; /* 메뉴 클릭 시 부드러운 스크롤 */
         }
 
-        .container {
-            max-width: 600px;
-            padding: 40px;
+        /* 내비게이션 바 */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9); /* 약간의 투명도로 세련되게 */
+            padding: 25px 0;
+            display: flex;
+            justify-content: center;
+            gap: 45px;
+            z-index: 1000;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #999;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #1a1a1a;
+            letter-spacing: 3px; /* 호버 시 자간이 넓어지는 우아한 효과 */
+        }
+
+        /* 각 섹션 설정 */
+        section {
+            padding: 150px 40px;
+            max-width: 700px;
+            margin: 0 auto;
+            min-height: 50vh;
+        }
+
+        h2 {
+            font-weight: 300; /* 얇은 폰트로 고급스럽게 */
+            font-size: 1.2rem;
+            margin-bottom: 60px;
+            color: #1a1a1a;
+            text-align: center;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+
+        /* 메인 홈 */
+        .intro {
+            text-align: center;
+            padding-top: 250px;
+            min-height: 80vh;
+        }
+
+        .intro h1 { 
+            font-size: 3.5rem; 
+            margin-bottom: 15px; 
+            font-weight: 600;
+            letter-spacing: -2px;
+        }
+
+        /* Fragments (단상) 스타일 */
+        .thought-item {
+            margin-bottom: 60px;
             text-align: left;
         }
 
-        h1 {
-            font-weight: 600;
-            font-size: 2.5rem;
+        .date { 
+            font-size: 0.75rem; 
+            color: #ccc; 
+            display: block;
             margin-bottom: 10px;
-            letter-spacing: -1px;
+            letter-spacing: 1px;
         }
 
-        .subtitle {
-            font-weight: 300;
-            color: #666;
-            font-size: 1.2rem;
-            margin-bottom: 40px;
-        }
-
-        p {
-            font-weight: 400;
+        .content {
             font-size: 1rem;
-            margin-bottom: 30px;
+            color: #444;
+            font-weight: 300;
         }
 
-        /* 모바일 대응 */
+        /* Stillness & Movement 박스 */
+        .museum-box {
+            background: #fafafa;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ddd;
+            border: 1px solid #f0f0f0;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
         @media (max-width: 600px) {
-            .container { padding: 20px; }
-            h1 { font-size: 2rem; }
+            nav { gap: 20px; }
+            .intro h1 { font-size: 2.5rem; }
+            section { padding: 100px 20px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#fragments">Fragments</a>
+        <a href="#stillness">Stillness</a>
+        <a href="#movement">Movement</a>
+    </nav>
+
+    <section id="home" class="intro">
         <h1>I'm G.</h1>
-        
-        <p class="subtitle">Digital Enthusiast & Curator</p>
-        
-        <p>
-            Welcome. I value simplicity and functional beauty.<br>
-            Currently focusing on building clean web experiences.<br>
-            Based in US.
-        </p>
-    </div>
+        <p style="color: #999; font-weight: 300; letter-spacing: 1px;">A Digital Museum of Moments and Thoughts</p>
+    </section>
+
+    <section id="fragments">
+        <h2>FRAGMENTS</h2>
+        <div class="thought-item">
+            <span class="date">APRIL 14, 2026</span>
+            <p class="content">The beauty of a digital space is that it never stops breathing. Today, my museum begins its journey.</p>
+        </div>
+        <div class="thought-item">
+            <span class="date">APRIL 10, 2026</span>
+            <p class="content">Simplicity is the ultimate sophistication.</p>
+        </div>
+    </section>
+
+    <section id="stillness">
+        <h2>STILLNESS</h2>
+        <div class="museum-box">Reserved for a Captured Moment</div>
+    </section>
+
+    <section id="movement">
+        <h2>MOVEMENT</h2>
+        <div class="museum-box">Reserved for a Moving Sequence</div>
+    </section>
+
 </body>
 </html>
